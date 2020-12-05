@@ -1,0 +1,1 @@
+ Generate your app icon and splash screens using cordova-res --skip-config --copy
