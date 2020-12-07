@@ -20,12 +20,10 @@ const Home: React.FC = () => {
         </IonHeader>
 
             <IonList>
-              <IonItem>
-                {Array(...Array(10)).map((v, i) => <Simple/>)}
-                <IonText>Teste</IonText>
-              </IonItem>
+                {Array(...Array(10)).map((v, i) => <Simple indice={i} simpleProps="Simple Props" />)}
+             
             </IonList>
-        <ExploreContainer />
+
 
 
 

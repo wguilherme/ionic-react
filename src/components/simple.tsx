@@ -1,10 +1,16 @@
+import { IonItem, IonText } from '@ionic/react';
 import React from 'react';
 
-interface SimpleProps { }
+interface SimpleProps {
+   simpleProps: string, 
+   indice: number
+ }
 
-const Simple: React.FC<SimpleProps> = () => {
+const Simple: React.FC<SimpleProps> = (props) => {
   return (
-   <p>Simple Component</p>
+   <IonItem>
+   <IonText>Simple Component + {props.simpleProps} nº {props.indice}</IonText>
+ </IonItem>
   );
 };
 

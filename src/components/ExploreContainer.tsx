@@ -1,7 +1,9 @@
 import React from 'react';
 import './ExploreContainer.css';
 
-interface ContainerProps { }
+interface ContainerProps { 
+  simpleProps: string
+}
 
 const ExploreContainer: React.FC<ContainerProps> = () => {
   return (
