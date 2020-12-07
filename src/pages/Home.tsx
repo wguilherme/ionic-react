@@ -20,16 +20,18 @@ const Home: React.FC = () => {
 
 
 
-  let [items, setItems] = useState([{name: 'Joaozinho'}])
+  let [items, setItems] = useState([])
   
   async function getItems() {
      const response = await api.get('pets')
      setItems(response.data);
+
   }  
 
 
   useIonViewDidEnter(() => {
     console.log('ionViewDidEnter event fired');
+    getItems()
   });
 
   return (
