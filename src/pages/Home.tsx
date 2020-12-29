@@ -16,10 +16,6 @@ name: string
 
 
 const Home: React.FC = () => {
-
-
-
-
   let [items, setItems] = useState([])
   
   async function getItems() {
@@ -38,23 +34,20 @@ const Home: React.FC = () => {
     <IonPage>
       <IonHeader >
         <IonToolbar>
-          <IonTitle>Hello World</IonTitle>
+          <IonTitle>Home</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
         <IonHeader collapse="condense">
           <IonToolbar>
-            <IonTitle size="large">Hello World</IonTitle>
+            <IonTitle size="large">Home</IonTitle>
           </IonToolbar>
-        </IonHeader>
+        </IonHeader> 
 
-  
-
+        <p>Home</p>
             <IonList>
                 {Array(...Array(10)).map((v, i) => <Simple  key={i} indice={i} simpleProps="Simple Props" />)}
             </IonList>
-
-
         <h2>Simple Loops</h2>
         {/* Simple array loop with map */}
         <IonList>
@@ -66,12 +59,6 @@ const Home: React.FC = () => {
         <IonList>
             {items.map((item: Item, i) => <IonItem key={i}>item: {item.name}</IonItem>)}
         </IonList>
-
-        
-
-
-
-
       </IonContent>
     </IonPage>
   );
